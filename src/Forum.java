@@ -122,8 +122,8 @@ public class Forum {
 
             // Check if the user clicked the "OK" button and entered a value
             if (result.isPresent()) {
-                String comment = result.get();
-                w.writeRepoFile(postID.getText() + ".post", postRead + comment, comment);
+                String comment = "User: " + user + "\n" + result.get();
+                w.writeRepoFile(postID.getText() + ".post", postRead + "\n-----" + comment, comment);
                 break;
             }
         }

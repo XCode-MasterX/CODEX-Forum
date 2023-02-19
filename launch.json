@@ -1,0 +1,52 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Java",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ]
+        },
+        {
+            "name": "Java Console App",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ],
+            "externalConsole": true
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "startupClass": "App",
+            "cwd": "${workspaceRoot}",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "mainClass": "App",
+            "vmArgs": "--module-path \"C:/Program Files/Java/javafx-sdk/lib\" --add-modules javafx.controls,javafx.fxml",
+            "cwd": "${workspaceRoot}",
+            "startupClass": "App",
+            "projectName": "Demander_c43244d3"
+        }
+    ]
+}

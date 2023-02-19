@@ -94,4 +94,4 @@ iv) Create a folder named: ".vscode"
 v) Copy the .json files into it.
 vi) Now run the App.java file.
 
-If it doesn't work, then you can download JavaFX from this link:
+If it doesn't work, then you can download JavaFX from this link: openjfx.io

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="466.0" prefWidth="806.0" style="-fx-background-color: #888888;" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forum">
+   <children>
+      <ToolBar layoutX="7.0" layoutY="14.0" prefHeight="54.0" prefWidth="176.0" style="-fx-background-color: #555555; -fx-background-radius: 30px;">
+        <items>
+          <Button fx:id="createRequest" mnemonicParsing="false" onAction="#createRequestClicked" onMouseEntered="#createRequestEnter" onMouseExited="#createRequestExit" prefHeight="39.0" prefWidth="74.0" style="-fx-background-radius: 20px; -fx-background-color: #FFA500;" text="+ Request" />
+            <Button fx:id="createDemand" mnemonicParsing="false" onAction="#createDemandClicked" onMouseEntered="#createDemandEnter" onMouseExited="#createDemandExit" prefHeight="39.0" prefWidth="84.0" style="-fx-background-radius: 20px; -fx-background-color: #FFA500;" text="+ Demand" />
+        </items>
+      </ToolBar>
+      <SplitPane dividerPositions="0.6675094816687737" layoutX="7.0" layoutY="83.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="377.0" prefWidth="793.0" style="-fx-background-color: #1c1c1c;">
+         <items>
+            <AnchorPane id="postViewer" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #2c2c2c;">
+               <children>
+                  <Label id="posterName" fx:id="posterName" layoutX="6.0" layoutY="8.0" prefHeight="62.0" prefWidth="227.0" style="-fx-background-color: #4f4f4f; -fx-background-radius: 10px; -fx-alignment: center;" text="OP name here" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label id="postContent" fx:id="postContent" alignment="TOP_LEFT" cache="true" layoutX="6.0" layoutY="78.0" lineSpacing="1.0" prefHeight="232.0" prefWidth="509.0" style="-fx-background-color: #4f4f4f; -fx-background-radius: 10px;" text="Post content here" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Bookman Old Style" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label id="posterName" fx:id="postType" layoutX="240.0" layoutY="6.0" prefHeight="62.0" prefWidth="143.0" style="-fx-background-color: #4f4f4f; -fx-background-radius: 5px;" text="Type: " textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="prevButton" layoutX="6.0" layoutY="325.0" mnemonicParsing="false" onAction="#prevClicked" onMouseEntered="#prevEnter" onMouseExited="#prevExit" prefHeight="36.0" prefWidth="89.0" style="-fx-background-radius: 10px; -fx-background-color: #FFA500;" text="&lt; PREV">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="15.0" />
+                     </font></Button>
+                  <Button fx:id="nextButton" layoutX="428.0" layoutY="325.0" mnemonicParsing="false" onAction="#nextClicked" onMouseEntered="#nextEnter" onMouseExited="#nextExit" prefHeight="36.0" prefWidth="89.0" style="-fx-background-color: #FFA500; -fx-background-radius: 10px;" text="NEXT &gt;">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="15.0" />
+                     </font></Button>
+                  <Button fx:id="claim" layoutX="101.0" layoutY="325.0" mnemonicParsing="false" onAction="#claimClicked" onMouseEntered="#claimEnter" onMouseExited="#claimExit" prefHeight="36.0" prefWidth="89.0" style="-fx-background-radius: 10px; -fx-background-color: #FFA500;" text="Claim?">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="commentButton" layoutX="198.0" layoutY="325.0" mnemonicParsing="false" onAction="#commentClicked" onMouseEntered="#commentEnter" onMouseExited="#commentExit" prefHeight="36.0" prefWidth="108.0" style="-fx-background-radius: 10px; -fx-background-color: #FFA500;" text="+Add Comment">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="11.0" />
+                     </font>
+                  </Button>
+                  <Label id="posterName" fx:id="postID" layoutX="388.0" layoutY="6.0" prefHeight="62.0" prefWidth="129.0" style="-fx-background-color: #4f4f4f; -fx-background-radius: 5px;" text="ID:" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Bookman Old Style" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="viewComment" layoutX="312.0" layoutY="325.0" mnemonicParsing="false" onAction="#viewCommentClicked" onMouseEntered="#viewCommentEnter" onMouseExited="#viewCommentExit" prefHeight="36.0" prefWidth="108.0" style="-fx-background-radius: 10px; -fx-background-color: #FFA500;" text="See Comment">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="chatViewer" minHeight="0.0" minWidth="0.0" prefHeight="368.0" prefWidth="233.0">
+               <children>
+                  <TextField id="userChat" fx:id="userInput" layoutX="6.0" layoutY="326.0" prefHeight="36.0" prefWidth="190.0" promptText="Text here" style="-fx-background-radius: 10px;" />
+                  <AnchorPane id="chatWindow" fx:id="chatView" minHeight="0.0" minWidth="0.0" prefHeight="326.0" prefWidth="262.0" style="-fx-background-color: #3f3f3f;">
+                     <children>
+                        <TextArea fx:id="chatArea" editable="false" layoutX="5.0" layoutY="4.0" prefHeight="319.0" prefWidth="253.0" wrapText="true" />
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="sendButton" layoutX="203.0" layoutY="326.0" mnemonicParsing="false" onAction="#sendClicked" onMouseEntered="#sendEnter" onMouseExited="#sendExit" prefHeight="36.0" prefWidth="54.0" style="-fx-background-radius: 10px; -fx-background-color: #FF5C00;" text="SEND" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <Label fx:id="userName" layoutX="671.0" layoutY="14.0" prefHeight="54.0" prefWidth="129.0" style="-fx-background-color: #555555; -fx-background-radius: 10px; -fx-alignment: center;" text="Username" textFill="WHITE">
+         <font>
+            <Font name="Lucida Sans Unicode" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</fx:root>
